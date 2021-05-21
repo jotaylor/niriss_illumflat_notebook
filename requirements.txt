@@ -1,0 +1,6 @@
+jupyter
+numpy
+jwst>=1.1.0
+astropy
+asdf
+scikit-learn
