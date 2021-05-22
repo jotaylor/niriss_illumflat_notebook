@@ -25,3 +25,5 @@ Run the Jupyter notebook `niriss_illumflat_notebook_part1.ipynb. If testing copy
 `/ifs/jwst/wit/niriss/tsohn/mirage_simulations/NIS-011/jw01086001001_01101_00045_nis_cal.fits`
 
 Copy these two files to the same directory as the notebook.
+
+The final output will be a delta flat file of FITS format, with a 2048x2048 image in the 1st data extension.
