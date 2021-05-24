@@ -28,12 +28,12 @@ OUTDIR = f"/ifs/jwst/wit/niriss/cap_simulations/nis011a/out_{today}"
 if not os.path.exists(OUTDIR):
     os.path.mkdir(OUTDIR)
 
-# Modify Image2 parameter ref file to skip photom and resample
+# Modify Image2 parameter ref file to skip resample and background
 step = Image2Pipeline()
 step.export_config('calwebb_image2.asdf')
 af = asdf.open("calwebb_image2.asdf")
 for i,dct in enumerate(af.tree["steps"]):
-    if dct["name"] in ["photom", "resample", "background"]:
+    if dct["name"] in ["resample", "background"]:
         af.tree["steps"][i]["parameters"]["skip"] = True
     if dct["name"] == "assign_wcs":
         af.tree["steps"][i]["parameters"]["override_distortion"] = "/grp/crds/cache/references/jwst/jwst_niriss_distortion_0010.asdf"
