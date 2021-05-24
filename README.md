@@ -19,6 +19,6 @@ where `uncal_path` is the path to input files, `outdir` is the output file path,
 
 ## Delta Flat Creation
 
-Run the Jupyter notebook `niriss_illumflat_notebook_part1.ipynb. If testing, you'll use 3 F150W images specified in the notebook.
+Run the Jupyter notebook `niriss_illumflat_notebook_part1.ipynb`. If testing, you'll use 3 F150W images specified in the notebook.
 
 The final output will be a delta flat file of FITS format, with a 2048x2048 image in the 1st data extension.
