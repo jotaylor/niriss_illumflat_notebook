@@ -26,7 +26,7 @@ OUTDIR = f"/ifs/jwst/wit/niriss/cap_simulations/nis011a/out_{today}"
 # !!!!!!!!!!!!!!!!!!!!
     
 if not os.path.exists(OUTDIR):
-    os.path.mkdir(OUTDIR)
+    os.mkdir(OUTDIR)
 
 # Modify Image2 parameter ref file to skip resample and background
 step = Image2Pipeline()
