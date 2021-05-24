@@ -24,7 +24,7 @@ step = Image2Pipeline()
 step.export_config('calwebb_image2.asdf')
 af = asdf.open("calwebb_image2.asdf")
 for i,dct in enumerate(af.tree["steps"]):
-    if dct["name"] in ["photom", "resample"]:
+    if dct["name"] in ["photom", "resample", "background"]:
         af.tree["steps"][i]["parameters"]["skip"] = True
 new_config = os.path.join(OUTDIR, "calwebb_image3.asdf")
 af.write_to(new_config)
