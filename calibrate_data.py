@@ -24,6 +24,9 @@ DET1FILES = glob.glob(os.path.join(DATA_DIR, "*uncal.fits"))
 N_PROCS = None
 OUTDIR = f"/ifs/jwst/wit/niriss/cap_simulations/nis011a/out_{today}"
 # !!!!!!!!!!!!!!!!!!!!
+    
+if not os.path.exists(OUTDIR):
+    os.path.mkdir(OUTDIR)
 
 # Modify Image2 parameter ref file to skip photom and resample
 step = Image2Pipeline()
@@ -51,8 +54,6 @@ def _make_pipeline(pipeline, outdir, config_file, raw_file):
 
 # Run the pipeline in parallel
 def parallelize_pipeline(det1files, n_procs=N_PROCS, outdir=OUTDIR, config_files=CONFIG_FILES):
-    if not os.path.exists(outdir):
-        os.path.mkdir(outdir)
     if n_procs is None:
         n_procs = multiprocessing.cpu_count()
     with multiprocessing.Pool(n_procs) as pool:
