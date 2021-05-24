@@ -19,11 +19,6 @@ where `uncal_path` is the path to input files, `outdir` is the output file path,
 
 ## Delta Flat Creation
 
-Run the Jupyter notebook `niriss_illumflat_notebook_part1.ipynb. If testing copy and use the files:
-
-`/ifs/jwst/wit/niriss/tsohn/mirage_simulations/NIS-011/jw01086001001_01101_00021_nis_cal.fits`
-`/ifs/jwst/wit/niriss/tsohn/mirage_simulations/NIS-011/jw01086001001_01101_00045_nis_cal.fits`
-
-Copy these two files to the same directory as the notebook.
+Run the Jupyter notebook `niriss_illumflat_notebook_part1.ipynb. If testing, you'll use 3 F150W images specified in the notebook.
 
 The final output will be a delta flat file of FITS format, with a 2048x2048 image in the 1st data extension.
