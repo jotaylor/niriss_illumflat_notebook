@@ -37,7 +37,7 @@ for i,dct in enumerate(af.tree["steps"]):
         af.tree["steps"][i]["parameters"]["skip"] = True
     if dct["name"] == "assign_wcs":
         af.tree["steps"][i]["parameters"]["override_distortion"] = "/grp/crds/cache/references/jwst/jwst_niriss_distortion_0010.asdf"
-new_config = os.path.join(OUTDIR, "calwebb_image3.asdf")
+new_config = os.path.join(OUTDIR, "calwebb_image2.asdf")
 af.write_to(new_config)
 af.close()
 CONFIG_FILES = {"Detector1Pipeline": None, "Image2Pipeline": new_config} 
